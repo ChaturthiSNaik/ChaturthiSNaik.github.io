@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #F8F1F1; /* Soft pink */
+    color: #4A4E69; /* Indigo-gray */
+  }
+  
+  header {
+    background: #8E8D8A; /* Taupe gray */
+    color: #FFFFFF; /* White */
+    padding: 1rem 0;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
+  
+  header ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  header ul li {
+    display: inline;
+  }
+  
+  header ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  header ul li a:hover {
+    color: #DA627D; /* Dusty rose */
+  }
+  
+  section {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  #about, #contact {
+    background: #FFF8F0; /* Soft cream */
+  }
+  
+  .project, .skills span {
+    margin: 1rem auto;
+    padding: 0.5rem;
+    border: 1px solid #8E8D8A; /* Taupe gray */
+    background: #FFFFFF; /* White */
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .project:hover, .skills span:hover {
+    transform: scale(1.05);
+  }
+  
+  footer {
+    background: #8E8D8A; /* Taupe gray */
+    color: #FFFFFF; /* White */
+    text-align: center;
+    padding: 1rem;
+  }  
