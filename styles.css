@@ -1,74 +1,146 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif; /* Modern font */
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background: #F8F1F1; /* Soft pink */
-    color: #4A4E69; /* Indigo-gray */
-  }
-  
-  header {
-    background: #8E8D8A; /* Taupe gray */
-    color: #FFFFFF; /* White */
-    padding: 1rem 0;
-  }
-  
-  header nav {
+    line-height: 1.8;
+    background: linear-gradient(to bottom, #0F172A, #1E293B); /* Deep blue gradient */
+    color: #E0F2FE; /* Light aqua */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+header {
+    background: linear-gradient(to right, #38BDF8, #1E293B); /* Vibrant gradient */
+    color: #FFFFFF; /* White text */
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add depth */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
-  }
-  
-  header ul {
+}
+
+header ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
-  }
-  
-  header ul li {
+    gap: 1.5rem;
+}
+
+header ul li {
     display: inline;
-  }
-  
-  header ul li a {
+}
+
+header ul li a {
     color: #FFFFFF;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  
-  header ul li a:hover {
-    color: #DA627D; /* Dusty rose */
-  }
-  
-  section {
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  #about, #contact {
-    background: #FFF8F0; /* Soft cream */
-  }
-  
-  .project, .skills span {
-    margin: 1rem auto;
-    padding: 0.5rem;
-    border: 1px solid #8E8D8A; /* Taupe gray */
-    background: #FFFFFF; /* White */
-    width: 80%;
-    max-width: 600px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease-in-out;
+}
+
+header ul li a:hover {
+    color: #0F172A; /* Dark blue */
+    background: #E0F2FE; /* Aqua highlight */
+    padding: 0.2rem 0.5rem;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-  
-  .project:hover, .skills span:hover {
-    transform: scale(1.05);
-  }
-  
-  footer {
-    background: #8E8D8A; /* Taupe gray */
-    color: #FFFFFF; /* White */
+}
+
+section {
+    padding: 3rem 2rem;
     text-align: center;
-    padding: 1rem;
-  }  
+    border-top: 2px solid #38BDF8; /* Teal accent */
+}
+
+#about, #contact {
+    background: linear-gradient(to bottom, #334155, #1E293B); /* Sleek gradient */
+    color: #E0F2FE;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+
+.button_d{
+    color: #38BDF8;
+}
+.project, .skills span {
+    margin: 2rem auto;
+    padding: 1rem 1.5rem;
+    border: 2px solid #38BDF8; /* Vibrant border */
+    background: linear-gradient(to right, #1E293B, #334155); /* Cool gradient */
+    color: #E0F2FE; /* Light text */
+    width: 80%;
+    max-width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.project:hover, .skills span:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to right, #38BDF8, #0F172A); /* Vibrant hover */
+}
+
+footer {
+    background: linear-gradient(to right, #0F172A, #1E293B); /* Deep blue gradient */
+    color: #E0F2FE; /* Light aqua */
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 3px solid #38BDF8; /* Teal accent */
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #38BDF8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #FFFFFF; /* White hover */
+}
+
+/* Button Styles */
+button {
+    background: linear-gradient(to right, #38BDF8, #0F172A);
+    color: #FFFFFF;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(to right, #0F172A, #38BDF8);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Smooth Card Animations */
+.project, .skills span {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
